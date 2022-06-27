@@ -14,11 +14,13 @@ app.use(express.json())
 
 connectDb()
 
+app.use('/quiz',QuizRoutes)
+
 app.use('/',(req,res)=>{
     res.send('Hello World')
 })
 
-app.use('/quiz',QuizRoutes)
+
 
 const port = process.env.PORT || 5000
 
